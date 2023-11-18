@@ -9,7 +9,7 @@ and return results with the `speech_final` flag set to `true`. The duration of n
 via the API parameter `endpointing`, for example `endpointing=1000` will require that 1000 ms of no-speech (following speech) was present.
 
 This feature has its limitations - non-speech signal audio can interrupt it, for example. Suppose you set `endpointing=1000` and you say "Hello." followed
-by 2000 ms of silence - chances are you will get a Deepgram transcription result with the transcript "Hello." and `speech_final` set to `true` - great.
+by 1100 ms of silence - chances are you will get a Deepgram transcription result with the transcript "Hello." and `speech_final` set to `true` - great.
 However, suppose that 500 ms after you say "Hello." someone knocks on your door, or your phone starts to ring
 (or a particularly loud car drives past the house) - these are all signal audio (i.e. not part of the background noise profile) but do not represent speech.
 This is where an audio-based VAD could make mistakes - it may think that speech has started again, and therefore not recognize 1000 ms of silence after you
