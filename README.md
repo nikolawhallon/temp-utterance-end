@@ -47,6 +47,6 @@ could then ignore), or if you receive an UtteranceEnd message with no preceeding
 ## Ultimate limitations
 
 Ultimately, any approach to determine when someone has finished speaking is a heuristic one and can fail. Why? Because humans can resume talking
-at any time for any reason (indeed some don't know when to stop!). Because of this, you might consider introduced special logic to your app
+at any time for any reason (indeed some don't know when to stop!). Because of this, you might consider introducing special logic to your app
 handling the cases where you think you have received an actionable transcript, you send it down your pipeline, and then new speech starts
 being received by your app - you then cancel whatever tasks you may have triggered in your pipeline and start over, given the new input.
